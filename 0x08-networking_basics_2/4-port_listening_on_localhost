@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-""" Changes the IP addresses of localhost and facebook.com """
+# Changes the IP addresses of localhost and facebook.com
 
 
 nc -l localhost 98
