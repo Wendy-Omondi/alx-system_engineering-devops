@@ -1,5 +1,5 @@
 # creates a file in /tmp
-file {'/tmp':
+file {'holberton':
   path       => '/tmp/holberton',
   permission => '0774',
   owner      => 'www-data',
