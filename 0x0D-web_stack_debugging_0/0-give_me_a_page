@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#comand used to fix (52) empty reply from server
+
+service apache2 start
