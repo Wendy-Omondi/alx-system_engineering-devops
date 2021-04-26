@@ -1,4 +1,5 @@
 sudo apt-get -y update
+sudo apt-get -y update
 sudo apt-get -y install haproxy
 sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
