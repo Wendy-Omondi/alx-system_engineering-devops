@@ -7,7 +7,7 @@
 import requests
 from sys import argv
 
-if __name__=="__main__":
+if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + "users/{}".format(argv[1])).json()
     todo_list = requests.get(url + "todos", params={"userId": argv[1]}).json()
@@ -22,8 +22,7 @@ if __name__=="__main__":
             NUMBER_OF_DONE_TASKS += 1
     TOTAL_NUMBER_OF_TASKS = len(todo_list)
     print("Employee {} is done with tasks({}/{}):".
-        format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS,
-                     TOTAL_NUMBER_OF_TASKS))
+          format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
 
     for t in TASK_TITLE:
         print("\t {}".format(t))
