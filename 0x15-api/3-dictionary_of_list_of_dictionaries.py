@@ -5,21 +5,25 @@
 """
 
 import requests
-from sys import argv
 import json
 
-if __name__ == "__main__":
-    url = "https://jsonplaceholder.typicode.com/"
-    user = requests.get(url + "users").json()
-    todo_list = requests.get(url + "todos").json()
-
-    dict_list = {item.get("id"):
-                 [{"task": j.get("title"),
-                     "completed": j.get("completed"),
-                     "username": item.get("username")}
-                     for j in todo_list
-                     if j.get("USER_ID") == item.get("id")]
-                 for item in user}
-
-    with open("todo_all_employees.json", 'w') as f:
-        json.dump(dict_list, f)
+if __name__ == '__main__':
+    users = requests.get("https://jsonplaceholder.typicode.com/users",
+                         verify=False).json()
+    userdict = {}
+    usernamedict = {}
+    for user in users:
+        uid = user.get("id")
+        userdict[uid] = []
+        usernamedict[uid] = user.get("username")
+    todo = requests.get("https://jsonplaceholder.typicode.com/todos",
+                        verify=False).json()
+    for task in todo:
+        taskdict = {}
+        uid = task.get("userId")
+        taskdict["task"] = task.get('title')
+        taskdict["completed"] = task.get('completed')
+        taskdict["username"] = usernamedict.get(uid)
+        userdict.get(uid).append(taskdict)
+    with open("todo_all_employees.json", 'w') as jsonfile:
+        json.dump(userdict, jsonfile)
