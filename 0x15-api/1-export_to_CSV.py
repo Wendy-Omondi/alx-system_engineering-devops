@@ -16,11 +16,6 @@ if __name__ == "__main__":
     USER_ID = argv[1]
     USERNAME = user.get('username')
 
-    EMPLOYEE_NAME = user.get('name')
-    TASK_TITLE = []
-    NUMBER_OF_DONE_TASKS = 0
-
-
     with open('2.csv', mode='w') as employee_file:
         user_writer = csv.writer(employee_file, quoting=csv.QUOTE_ALL)
         for task in todo_list:
