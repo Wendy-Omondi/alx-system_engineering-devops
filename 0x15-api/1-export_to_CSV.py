@@ -16,8 +16,9 @@ if __name__ == "__main__":
     USER_ID = argv[1]
     USERNAME = user.get('username')
 
-    with open('2.csv', mode='w') as employee_file:
-        user_writer = csv.writer(employee_file, quoting=csv.QUOTE_ALL)
+    with open("{}.csv".format(USER_ID), 'w', newline='') as csvfile:
+        user_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todo_list:
-            user_writer.writerow([USER_ID, USERNAME, task.get('completed'),
-                                  task.get('title')])
+            user_writer.writerow([int(USER_ID), user.get('username'),
+                                 task.get('completed'),
+                                 task.get('title')])
