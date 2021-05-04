@@ -13,14 +13,8 @@ if __name__ == "__main__":
     TASK_TITLE = []
     TASKS = {}
 
-    for item in todo_list:
-        task = {}
-        task['task'] = item.get('title')
-        task['completed'] = item.get('completed')
-        task['username'] = USERNAME
-        TASK_TITLE.append(task)
-
-    TASKS[USER_ID] = TASK_TITLE
-
-    with open("{:}.json".format(USER_ID), 'w') as f:
-        json.dump(TASKS, f)
+    with open("{}.json".format(USER_ID), "w") as json_file:
+        json.dump({USER_ID: [{
+            "task": task.get("title"),
+            "completed": task.get("completed"),
+            "username": user.get("username")} for task in todo_list]}, json_file)
