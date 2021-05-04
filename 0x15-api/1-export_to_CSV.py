@@ -4,9 +4,9 @@
     for a given employee ID using a given REST API.
 """
 
+import csv
 import requests
 from sys import argv
-import csv
 
 
 if __name__ == "__main__":

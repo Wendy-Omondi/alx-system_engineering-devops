@@ -4,8 +4,8 @@
     for a given employee ID using a given REST API.
 """
 
-import requests
 import json
+import requests
 
 if __name__ == '__main__':
     users = requests.get("https://jsonplaceholder.typicode.com/users",
