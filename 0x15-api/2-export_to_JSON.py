@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+    Returns information about a TO DO list progress.
+    for a given employee ID using a given REST API.
+"""
 import json
 import requests
 from sys import argv
