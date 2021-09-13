@@ -1,6 +1,6 @@
 # Fixes failed requests
 
-servie { 'nginx stop':
+service { 'nginx stop':
   ensure => stopped;
 }
 
