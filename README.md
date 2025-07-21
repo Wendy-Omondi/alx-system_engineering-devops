@@ -1,5 +1,7 @@
-# **ALX System Engineering Devops**
-## **Bash | Scripting | Networking | Web Stack | Security | On Call | Web Stack Debugging
+This repository contains foundational work completed as part of the **ALX-Holberton Software Engineering Program**.  
+It covers core topics in system engineering and DevOps with a focus on practical Bash scripting, file permissions, networking, and process management in a Linux environment.
+#### **Bash | Scripting | Networking | Web Stack | Security | On Call | Web Stack Debugging**
+
 
 ## **Bash**
 * [0x00. Shell, basics](https://github.com/Wendy-Omondi/alx-system_engineering-devops/tree/master/0x00-shell_basics)
@@ -44,3 +46,18 @@
 * [0x12. Web stack debugging #2 ](https://github.com/Wendy-Omondi/alx-system_engineering-devops/tree/master/0x12-web_stack_debugging_2)
 * [0x17. Web stack debugging #3 ](https://github.com/Wendy-Omondi/alx-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
 * [0x1B. Web stack debugging #4](https://github.com/Wendy-Omondi/alx-system_engineering-devops/tree/master/0x1B-web_stack_debugging_4)
+
+> Each script is executable and includes comments to describe its purpose.
+
+## 🛠️ Tech & Tools
+- **Bash scripting**
+- **Linux CLI** (Ubuntu 20.04)
+- `ssh`, `scp`, `netstat`, `telnet`, `curl`, `ping`, etc.
+- Git & GitHub version control
+
+## 🚀 Getting Started
+
+To run most scripts:
+
+```bash
+./script_name
