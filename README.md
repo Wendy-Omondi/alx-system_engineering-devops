@@ -1,4 +1,5 @@
-This repository contains foundational work completed as part of the **ALX-Holberton Software Engineering Program**.  
+## **ALX-Holberton Software Engineering Program**. 
+This repository contains foundational work completed as part of the  
 It covers core topics in system engineering and DevOps with a focus on practical Bash scripting, file permissions, networking, and process management in a Linux environment.
 #### **Bash | Scripting | Networking | Web Stack | Security | On Call | Web Stack Debugging**
 
